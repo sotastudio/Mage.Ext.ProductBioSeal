@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+		<SotaStudio_ProductBioSeal>
+			<version>1.0.0</version>
+		</SotaStudio_ProductBioSeal>
+	</modules>
+
+	<frontend>
+		<layout>
+			<updates>
+				<sota_productbioseal>
+					<file>sota/product_bio_seal.xml</file>
+				</sota_productbioseal>
+			</updates>
+		</layout>
+	</frontend>
+
+	<global>
+		<blocks>
+			<sota_pbs>
+				<class>SotaStudio_ProductBioSeal_Block</class>
+			</sota_pbs>
+		</blocks>
+		<resources>
+			<productbioseal_setup>
+				<setup>
+					<module>SotaStudio_ProductBioSeal</module>
+					<class>Mage_Eav_Model_Entity_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</productbioseal_setup>
+
+			<productbioseal_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</productbioseal_write>
+
+			<productbioseal_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</productbioseal_read>
+		</resources>
+	</global>
+
+	<default>
+		<cataloginventory>
+			<bio_seal>
+				<link_url>http://www.bio-siegel.de/</link_url>
+				<link_target>_blank</link_target>
+			</bio_seal>
+		</cataloginventory>
+	</default>
+
+</config>

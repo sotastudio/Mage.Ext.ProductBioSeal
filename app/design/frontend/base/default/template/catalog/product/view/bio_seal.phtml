@@ -1,0 +1,13 @@
+<?php if ($this->isApplicable()): ?>
+
+	<?php $_helper = $this->helper('catalog/output'); ?>
+
+	<div class="bio-seal-wrap">
+		<div class="bio-seal-logo"><a href="<?php echo $this->getLinkUrl(); ?>" target="<?php echo $this->getLinkTarget(); ?>"><img src="<?php echo $this->getSkinUrl('images/bio-seal.png'); ?>" /></a></div>
+		<div class="bio-seal-text">
+			<h2>Wo Bio draufsteht, ist auch Bio drin!</h2>
+			<p><strong>Viele gute Gründe sprechen für Bio-Produkte.</strong><br />Informieren Sie sich beim <a href="<?php echo $this->getLinkUrl(); ?>" target="<?php echo $this->getLinkTarget(); ?>">Bundesministerium für Ernährung, Landwirtschaft und Verbraucherschutz</a>.</p>
+		</div>
+	</div>
+
+<?php endif; ?>
