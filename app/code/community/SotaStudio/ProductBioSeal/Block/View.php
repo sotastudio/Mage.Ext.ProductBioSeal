@@ -36,10 +36,7 @@ class SotaStudio_ProductBioSeal_Block_View extends Mage_Catalog_Block_Product_Ab
 	// System Config Paths for this module
 	const confPath_Enable 		= 'cataloginventory/bio_seal/enable';
 	const confPath_LinkUrl 		= 'cataloginventory/bio_seal/link_url';
-	const confPath_LinkTarget	= 'cataloginventory/bio_seal/link_targetl';
-	// Attribute value states
-	const attrStateTrue			= 'Yes';
-	const attrStateFalse		= 'No';
+	const confPath_LinkTarget	= 'cataloginventory/bio_seal/link_target';
 
 	protected $isApplicable		= null;
 
@@ -77,7 +74,7 @@ class SotaStudio_ProductBioSeal_Block_View extends Mage_Catalog_Block_Product_Ab
 	 */
 	protected function getProductSealState()
 	{
-		return ($this->getProduct()->getAttributeText(self::attrName) == self::attrStateTrue) ? true : false;
+		return $this->getProduct()->getData(self::attrName);
 	}
 
 	public function getLinkUrl()
